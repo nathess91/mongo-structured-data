@@ -3,6 +3,8 @@ var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/mongoRelationships");
 var Schema = mongoose.Schema;
 
+mongoose.Promise = global.Promise;
+
 // Referenced Data
 var foodSchema = new Schema({
   name: {
